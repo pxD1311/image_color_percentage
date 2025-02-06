@@ -27,6 +27,9 @@ def display_percentage(color_dict : dict) -> None:
     if total == 0:
         print("No valid pixels to process.")
         return
+    
+    color_dict = dict(sorted(color_dict.items(), key=lambda item: item[1], reverse=True))
+
     for color, amount in color_dict.items():
         percentage = round(amount/total * 100, 2)
         if percentage > 0:
