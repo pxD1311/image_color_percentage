@@ -12,7 +12,7 @@ class Pixel:
                 color_range[0][1] <= self.rgb[1] <= color_range[1][1] and
                 color_range[0][2] <= self.rgb[2] <= color_range[1][2]):
                 return color_name
-        return "None"
+        return "Unknown"
 
     def __str__(self) -> str:
         return f"Pixel[Color = {self.color}, RGB = {self.rgb},Opacity = {self.opacity}]"
